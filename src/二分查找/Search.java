@@ -1,4 +1,4 @@
-package erfenchazhao;
+package 二分查找;
 
 import java.util.Scanner;
 

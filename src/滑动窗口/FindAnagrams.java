@@ -1,4 +1,4 @@
-package huadongchuangkou;
+package 滑动窗口;
 
 import java.util.ArrayList;
 import java.util.Arrays;

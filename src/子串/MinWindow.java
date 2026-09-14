@@ -1,4 +1,4 @@
-package zichuan;
+package 子串;
 
 import java.util.HashMap;
 import java.util.Map;

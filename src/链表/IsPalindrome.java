@@ -1,6 +1,5 @@
-package lianbiao;
+package 链表;
 
-import java.util.List;
 import java.util.Scanner;
 
 /**
