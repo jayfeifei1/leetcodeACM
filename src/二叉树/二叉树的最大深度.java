@@ -30,30 +30,29 @@ public class 二叉树的最大深度 {
         int right = postOrder(root.right);
         return Math.max(left,right) + 1;
     }
-    public static TreeNode buildTree(String s){
-        if(s == null || s.length() == 0){
+    public static TreeNode buildTree(String str){
+        if(str == null || str.length() == 0){
             return null;
         }
-        String[] str = s.split(" ");
-        TreeNode root = new TreeNode(Integer.parseInt(str[0]));
+        String[] strs = str.split(" ");
+        TreeNode root = new TreeNode(Integer.parseInt(strs[0]));
         Deque<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
         int index = 1;
-        while(!queue.isEmpty() && index < str.length){
-            TreeNode rootNode = queue.poll();
-            if(index < str.length && !str[index].equals("null")){
-                rootNode.left = new TreeNode(Integer.parseInt(str[index]));
-                queue.offer(rootNode.left);
+        while(!queue.isEmpty() && index < strs.length){
+            TreeNode node = queue.poll();
+            if(index < strs.length && !strs[index].equals("null") ){
+                node.left= new TreeNode(Integer.parseInt(strs[index]));
+                queue.offer(node.left);
             }
             index++;
-            if(index < str.length && !str[index].equals("null")){
-                rootNode.right = new TreeNode(Integer.parseInt(str[index]));
-                queue.offer(rootNode.right);
+            if(index < strs.length && !strs[index].equals("null") ){
+                node.right = new TreeNode(Integer.parseInt(strs[index]));
+                queue.offer(node.right);
             }
             index++;
         }
         return root;
-
     }
 
     public static void main(String[] args) {

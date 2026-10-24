@@ -29,9 +29,8 @@ public class 字符串相加 {
         return sb.reverse().toString();
     }
     public static void main(String[] args){
-        Scanner in = new Scanner(System.in);
-        String num1 = in.nextLine();
-        String num2 = in.nextLine();
+        String num1 = "111";
+        String num2 = "222";
         String s = addStrings(num1,num2);
         System.out.println(s);
     }
